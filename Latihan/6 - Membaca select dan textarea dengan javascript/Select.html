@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+</head>
+
+<body>
+    <form name="form">
+        <script>
+            function proses() {
+                var jabatan = document.form.jabatan.value;
+                var pendidikan = document.form.pendidikan.value;
+                var alamat = document.form.alamat.value;
+                alert("Jabatan :" + jabatan + "\nPendidikan :" + pendidikan + "\nAlamat :" + alamat);
+            }
+        </script>
+        <center>
+            <font size="4">
+                <table>
+                    Membaca Object bertipe select dan Text Area
+                    <tr>
+                        <td colspan="2">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jabatan</td>
+                        <td>
+                            <select name="jabatan">
+                                <option>MANAGER</option>
+                                <option>HRD</option>
+                                <option>MARKETING</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pendidikan</td>
+                        <td>
+                            <select name="pendidikan">
+                                <option>SMA</option>
+                                <option>S1</option>
+                                <option>S2</option>
+                                <option>S3</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Alamat</td>
+                        <td>
+                            <textarea name="alamat"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <hr>
+                        </td>
+                    </tr>
+                </table>
+                <input type=button value="Proses" onclick="proses()">
+                <input type=reset value="Reset">
+            </font>
+        </center>
+    </form>
+</body>
+
+</html>

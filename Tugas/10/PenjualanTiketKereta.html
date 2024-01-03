@@ -1,0 +1,40 @@
+<html>
+<form action="ProsesTiketKereta.php" method="post">
+    <center>
+        <h1>PENJUALAN TIKET KERETA API</h1>
+        <hr width="550">
+        <table>
+            <tr>
+                <td>KOTA TUJUAN</td>
+                <td>
+                    <select type="select" name="tujuan">
+                        <option>BANDUNG</option>
+                        <option>JAKARTA</option>
+                        <option>CIREBON</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>KELAS</td>
+                <td><input type="radio" name="kelas" value="EKONOMI">EKONOMI</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="radio" name="kelas" value="BISNIS">BISNIS</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="radio" name="kelas" value="EKSEKUTIF">EKSEKUTIF</td>
+            </tr>
+            <tr>
+                <td>JUMLAH TIKET</td>
+                <td><input type="text" name="jumlahtiket" size="2"></td>
+            </tr>
+        </table>
+        <hr width="550">
+        <br>
+        <input type="submit" value="Proses">
+        <input type="reset" value="Reset">
+    </center>
+</form>
+</html>

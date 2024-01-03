@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio</title>
+</head>
+
+<body>
+    <form name="form">
+        <script>
+            function proses() {
+                if (document.form.barang[0].checked) {
+                    var harga = 7000000;
+                } else if (document.form.barang[1].checked) {
+                    var harga = 2500000;
+                } else if (document.form.barang[2].checked) {
+                    var harga = 5000000;
+                }
+
+                document.form.harga.value = harga;
+
+                alert("Harga : " + harga)
+            }
+        </script>
+        <center>
+            <h3>Membaca Objek bertipe Radio</h3>
+            <hr width="350">
+            <table>
+                <tr>
+                    <td>Nama Barang:</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="barang">Laptop<br>
+                        <input type="radio" name="barang">Printer<br>
+                        <input type="radio" name="barang">komputer<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Harga</td>
+                    <td><input type="text" name="harga" size="10" disabled></td>
+                </tr>
+            </table>
+            <hr width="350">
+            <input type="button" value="Proses" onclick="proses()">
+            <input type="reset" value="Reset">
+        </center>
+    </form>
+</body>
+
+</html>

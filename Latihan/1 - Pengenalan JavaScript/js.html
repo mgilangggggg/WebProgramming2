@@ -1,0 +1,46 @@
+<script>
+    8, 4, 0, 0
+    var A = 12; // A = 1100b = 1x2^3 + 1*2^2 + 0*2^1 + 0*2^0
+    8, 0, 2, 0
+    var B = 10; // B = 1010b = 1*2^3 + 0*2^2 + 1*2^1 + 0*2^0
+    var C = A & B
+    /*maka akan dihasilkan bilangan seperti berikut: 
+     1100 AND 1010
+     
+     1100
+     1010
+     ----
+     1000
+     1 and 1 = 1, jika keduanya bernilai 1 maka hasilnya 1
+    */
+    document.write("C:", C, "<br>");
+    var A = 12;
+    var C = A << 2;
+    var D = A >> 1
+    var E = A ^ B;
+    var F = ~B;
+    var G = A >>> 3
+    document.write("A:", A, "<br>");
+    document.write("B:", B, "<br>");
+    document.write("C:", C, "<br>");
+    document.write("D:", D, "<br>");
+    document.write("E:", E, "<br>");
+    document.write("F:", F, "<br>");
+    document.write("G:", G, "<br>");
+</script>
+maka variabel C akan bernilai 48 (0011 0000)
+= 1*2^5 + 1*2^4
+32 16
+variabel D akan bernilai 6 (0110) yaitu 12 digeser 1 kekanan
+1100 menjadi 0110
+1100 =>12
+1010 =>10
+0110 => 6
+C:8
+A:12
+B:10
+C:48
+D:6
+E:6
+F:-11
+G:1

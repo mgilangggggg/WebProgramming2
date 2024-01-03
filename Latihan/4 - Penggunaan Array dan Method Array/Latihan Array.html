@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h3>MENAMPILKAN HARGA GORENGAN<br>MANG ODANG
+            <hr>
+        </h3>
+        <script>
+            var no = [1, 2, 3, 4, 5];
+            var nama = ['Gehu', 'Cireng', 'Combro', 'Batagor', 'Odading'];
+            var harga = [1000, 500, 750, 5000, 1500];
+            var jumlah = [5, 3, 8, 2, 10];
+
+            total = harga[0] * jumlah[0];
+            total2 = harga[1] * jumlah[1];
+            total3 = harga[2] * jumlah[2];
+            total4 = harga[3] * jumlah[3];
+            total5 = harga[4] * jumlah[4];
+
+            document.write("<table border=1>");
+            document.write("<tr><th>NO</th>");
+            document.write("<th>NAMA</th>");
+            document.write("<th>HARGA</th>");
+            document.write("<th>JUMLAH</th>");
+            document.write("<th>TOTAL</th></tr>");
+
+            document.write("<tr><td>", no[0]);
+            document.write("<td>", nama[0]);
+            document.write("<td>", harga[0]);
+            document.write("<td>", jumlah[0]);
+            document.write("<td>", total, "</tr>");
+
+            document.write("<tr><td>", no[1]);
+            document.write("<td>", nama[1]);
+            document.write("<td>", harga[1]);
+            document.write("<td>", jumlah[1]);
+            document.write("<td>", total2, "</tr>");
+
+            document.write("<tr><td>", no[2]);
+            document.write("<td>", nama[2]);
+            document.write("<td>", harga[2]);
+            document.write("<td>", jumlah[2]);
+            document.write("<td>", total3, "</tr>");
+
+            document.write("<tr><td>", no[3]);
+            document.write("<td>", nama[3]);
+            document.write("<td>", harga[3]);
+            document.write("<td>", jumlah[3]);
+            document.write("<td>", total4, "</tr>");
+
+            document.write("<tr><td>", no[4]);
+            document.write("<td>", nama[4]);
+            document.write("<td>", harga[4]);
+            document.write("<td>", jumlah[4]);
+            document.write("<td>", total5, "</tr>");
+            document.write("</table>");
+        </script>
+    </center>
+
+    <center>
+        <table border=1>
+            <tr>
+                <th>NO
+                <th>BARANG
+                <th>HARGA</th>
+                <th>JUMLAH</th>
+                <th>TOTAL</th>
+                <script>
+                    var barang = ["Laptop", "SSD", "Komputer", "Hardisk", "Monitor"];
+                    var harga = [1250000, 500000, 600000, 700000, 2500000];
+                    var jumlah = [10, 5, 2, 3, 6];
+                    var th = 0;
+
+                    for (i = 0; i < 5; i++) {
+                        var total = harga[i] * jumlah[i];
+                        var totalbayar = total;
+                        var th = th + harga[i];
+                        document.write("<br><tr><td>", i + 1, ".", "<td>", barang[i], "<td>", harga[i], "<td>", jumlah[i],
+                            "<td>", total);
+                    }
+                    document.write("<tr><td>Total Harga<td>", th);
+                </script>
+    </center>
+</body>
+
+</html>

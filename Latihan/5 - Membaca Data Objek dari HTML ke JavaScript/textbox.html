@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textbox</title>
+</head>
+
+<body>
+    <form name="form">
+        <script>
+            function proses() {
+                var panjang = document.form.panjang.value;
+                var lebar = document.form.lebar.value;
+                var luas = panjang * lebar;
+                document.form.luas.value = luas;
+            }
+        </script>
+        <center>
+            <font size="5">
+                Menghitung Luas Persegi Panjang
+                <hr>
+                <table>
+                    <tr>
+                        <td>Panjang</td>
+                        <td><input name="panjang" size="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Lebar</td>
+                        <td><input name="lebar" size="5"></td>
+                    </tr>
+                    <td colspan="2">
+                        <hr>
+                    </td>
+                    <tr>
+                        <td>Luas</td>
+                        <td><input name="luas" size="5"></td>
+                    </tr>
+                </table>
+                <hr>
+                <input type="button" value="Proses" onclick="proses()">
+                <input type="reset" value="Reset">
+        </center>
+    </form>
+</body>
+
+</html>

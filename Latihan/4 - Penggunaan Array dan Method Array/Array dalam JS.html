@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <title>Document</title>
+    </head>
+
+    <body>
+        <!-- Array1 -->
+        <script>
+            var kota = ['Bandung', 'Ciwaruga', 'Cimahi', 'Garut'];
+            document.write(kota[1]);
+        </script>
+
+        <!-- Array2 -->
+        <h3>Array dengan sintak new Array</h3>
+        <script>
+            var hari = new Array('Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat');
+            document.write("Sekarang ", hari[1], " Besok ", hari[2], "<br>");
+        </script>
+
+        <!-- Array3 -->
+        <script>
+            var kota = ['Bandung', 'Ciwaruga', 'Cimahi', 'Garut'];
+            document.write("<br><br><h3>Menampilkan dengan perulangan For</h3><hr>");
+            for (i = 0; i < kota.length; i++)
+                document.write(kota[i], "<br>");
+
+            var nama = ['Asep', 'Iwan', 'Cepi', 'Agus', 'Dadang'];
+            document.write("<br><h3>Menampilkan dengan for in</h3><hr>");
+            for (i in nama)
+                document.write(i, ".", nama[i] + "<br>")
+        </script>
+
+        <!-- Array5 -->
+        <h3>Penggunaan method Array join()</h3>
+        <script>
+            var array1 = [1, 2, 3, 4, 5, "a", "b", "c", "d", "e"];
+            document.write(array1.join(), "<br>");
+            document.write(array1.join("."), "<br>");
+            document.write(array1.join("|"), "<br>");
+            document.write(array1.join("_"), "<br>");
+        </script>
+
+        <!-- Array6 -->
+        <h3>Penggunaan method Array reverse()</h3>
+        <script>
+            var cemilan = ['Gehu', 'Cireng', 'Combro', 'Batagor', 'Odading'];
+            cemilan.reverse();
+            document.write(cemilan.toString(), "<br>")
+        </script>
+
+        <!-- Array7 -->
+        <h3>Penggunaan method Array sort()</h3>
+        <script>
+            var buah = ['Semangka', 'Apel', 'Rambutan', 'Mangga'];
+            buah.sort();
+            document.write(buah.toString(), "<br>");
+        </script>
+
+        <!-- Array8 -->
+        <h3>Penggunaan method Array concat()</h3>
+        <script>
+            var buah = ['Semangka', 'Apel', 'Rambutan', 'Mangga'];
+            var gabungan = buah.concat('Bayam', 'Kangkung', 'Genjer');
+            document.write(gabungan.toString(), "<br>");
+        </script>
+
+        <!-- Array9 -->
+        <h3>Penggunaan method Array slice()</h3>
+        <script>
+            var buah = ['Semangka', 'Apel', 'Rambutan', 'Mangga'];
+            var hasil = buah.slice(2, 4);
+            document.write(hasil.toString(), "<br>");
+        </script>
+
+        <!-- Array10 -->
+        <h3>Penggunaan method objek array: Array.splice()</h3>
+        <script>
+            var array1 = [1, 2, 3, 4, "a", "b", "c", "d"];
+            document.write(array1.toString(), "<br>");
+
+            // Splice dari index ke 2
+            var array2 = array1.splice(2);
+            document.write(array1.toString(), "<br>");
+            document.write(array2.toString(), "<br><br>");
+        </script>
+
+        <!-- Array11 -->
+        <script>
+            var arr1 = [1, 2, 3, 4, "a", "b", "c", "d"];
+            document.write(arr1.toString(), "<br>");
+
+            // hapus 3 elemen mulai dari index ke 3
+            var arr2 = arr1.splice(3, 3);
+            document.write(arr1.toString(), "<br>");
+            document.write(arr2.toString(), "<br><br>");
+        </script>
+
+        <!-- Array12 -->
+        <script>
+            var arr1 = [1, 2, 3, 4, "a", "b", "c", "d"]
+            document.write(arr1.toString(), "<br>");
+
+            // masukan elemen "x","y","z"
+            // mulai dari elemen ke 4
+            var arr2 = arr1.splice(4, 0, "x", "y", "z");
+            document.write(arr1.toString(), "<br>");
+            document.write(arr2.toString(), "<br>"); // hasil [] (array kosong)
+
+            var arr1 = [1, 2, 3, 4, "a", "b", "c", "d"];
+            document.write(arr1.toString(), "<br>");
+
+            // hapus 4 elemen mulai dari elemen ke 4
+            // masukan elemen "x","y","z" pada posisi penghapusan
+            var arr2 = arr1.splice(4, 4, "x", "y", "z")
+            document.write(arr1.toString(), "<br>");
+            document.write(arr2.toString(), "<br><br>");
+        </script>
+
+        <!-- Array13 -->
+        <h3>Metode pop dan shift</h3>
+        <script>
+            var kota = ['Bandung', 'Ciwaruga', 'Cimahi', 'Garut'];
+            kota.pop();
+            document.write(kota.toString(), "<br>");
+        </script>
+
+        <!-- Array14 -->
+        <script>
+            var kota = ['Bandung', 'Ciwaruga', 'Cimahi', 'Garut'];
+            kota.shift();
+            document.write(kota.toString(), "<br>");
+        </script>
+
+        <!-- Array15 -->
+        <h3>Metode push dan unshift</h3>
+        <script>
+            var kota = ['Dago', 'Bandung', 'Ciwaruga', 'Cimahi', 'Garut'];
+            kota.push("Lembang");
+            document.write(kota.toString(), "<br>");
+        </script>
+
+        <!-- Array16 -->
+        <script>
+            var kota = ['Bandung', 'Ciwaruga', 'Cimahi', 'Garut'];
+            kota.unshift("Cigugur Girang");
+            document.write(kota.toString(), "<br>");
+        </script>
+
+
+    </body>
+
+</html>

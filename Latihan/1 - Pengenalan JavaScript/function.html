@@ -1,0 +1,30 @@
+<!-- !fungsi tanpa parameter -->
+<script>
+    function menampilkan_teks() {
+        document.write("Contoh Fungsi Menggunakan<br>");
+        document.write("Java Script<br>");
+    }
+    menampilkan_teks();
+</script>
+
+<!-- !fungsi dengan parameter -->
+<script>
+    function penjumlahan(x, y) {
+        var result = x + y;
+        alert(result);
+    }
+    penjumlahan(10, 5);
+</script>
+
+<!-- !fungsi yang mengembalikan nilai -->
+<script>
+    function kali(a, b) {
+        hasilkali = a * b;
+        return hasilkali;
+    }
+    // memanggil fungsi
+    var nilai1 = 20;
+    var nilai2 = 5;
+    var hasilperkalian = kali(nilai1, nilai2);
+    document.write(hasilperkalian);
+</script>

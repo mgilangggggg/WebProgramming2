@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 7.2</title>
+</head>
+
+<body bgcolor="lightskyblue">
+    <form name="form">
+        <script>
+            function proses() {
+                var total = 0;
+                var jumlah = document.form.jumlah.value;
+
+                if (document.form.hp.checked)
+                    var total = total + 1200000 * jumlah;
+                if (document.form.laptop.checked)
+                    var total = total + 5000000 * jumlah;
+                if (document.form.komputer.checked)
+                    var total = total + 3000000 * jumlah;
+
+                document.form.total.value = total;
+            }
+        </script>
+        <center>
+            <h3>PROGRAM PENJUALAN BARANG</h3>
+            <hr width="350">
+            <table>
+                <tr>
+                    <td bgcolor="grey">NAMA BARANG<td bgcolor="grey">JUMLAH BELI</td>
+                </tr>
+                <td colspan="2">
+                    <hr>
+                </td>
+                <tr>
+                    <td><input type="checkbox" name="hp">Handphone</td>
+                    <td><input type="text" name="jumlah" size="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="laptop">Laptop</td>
+                    <td><input type="text" name="jumlah1" size="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="komputer">Komputer</td>
+                    <td><input type="text" name="jumlah2" size="1"></td>
+                </tr>
+                <td colspan="2">
+                    <hr>
+                </td>
+                <tr>
+                    <td>Total Harga</td>
+                    <td><input type="text" name="total" size="5" disabled></td>
+                </tr>
+                <td colspan="2">
+                    <hr>
+                </td>
+            </table>
+            <hr width="350">
+            <input type="button" value="Proses" onclick="proses()">
+            <input type="reset" value="Reset">
+        </center>
+    </form>
+</body>
+
+</html>

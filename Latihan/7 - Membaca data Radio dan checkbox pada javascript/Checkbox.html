@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox</title>
+</head>
+
+<body>
+    <form name="form">
+        <script>
+            function proses() {
+                var harga = 0;
+
+                if (document.form.nasigoreng.checked)
+                    var harga = harga + 12000;
+                if (document.form.esjeruk.checked)
+                    var harga = harga + 8000;
+                if (document.form.soto.checked)
+                    var harga = harga + 8000;
+                if (document.form.tehmanis.checked)
+                    var harga = harga + 4000;
+                if (document.form.nasirames.checked)
+                    var harga = harga + 11000;
+                if (document.form.eskelapa.checked)
+                    var harga = harga + 10000;
+
+                document.form.harga.value = harga;
+
+                alert("Harga : " + harga)
+            }
+        </script>
+
+        <center>
+            <h3>Menggunakan Checkbox</h3>
+            <hr width="350">
+            <table>
+                <tr>
+                    <td>MAKANAN
+                    <td>MINUMAN</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type=checkbox name=nasigoreng>Nasi Goreng
+                    </td>
+                    <td>
+                        <input type=checkbox name=esjeruk>Es Jeruk
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type=checkbox name=soto>Soto
+                    </td>
+                    <td>
+                        <input type=checkbox name=tehmanis>Teh Manis
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type=checkbox name=nasirames>Nasi Rames
+                    </td>
+                    <td>
+                        <input type=checkbox name=eskelapa>Es Kelapa
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Harga</td>
+                    <td><input type="text" name="harga" size="10" disabled></td>
+                </tr>
+            </table>
+            <hr width="350">
+            <input type="button" value="Proses" onclick="proses()">
+            <input type="reset" value="Reset">
+        </center>
+    </form>
+</body>
+
+</html>

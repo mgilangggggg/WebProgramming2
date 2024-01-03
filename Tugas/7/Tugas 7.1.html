@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tugas 7.1</title>
+</head>
+
+<body bgcolor="lightskyblue">
+   <form name="form">
+      <script>
+         function proses() {
+            var tiket = document.form.tiket.value;
+            if (document.form.kota[0].checked)
+               var harga = 100000;
+            if (document.form.kota[1].checked)
+               var harga = 150000;
+            if (document.form.kota[2].checked)
+               var harga = 200000;
+
+            document.form.harga.value = harga;
+            document.form.tiket.value = tiket;
+
+            var total = harga * tiket;
+            document.form.total.value = total;
+         }
+      </script>
+      <center>
+         <h3>PROGRAM PENJUALAN TIKET</h3>
+         <hr width="350">
+         <table>
+            <tr>
+               <td>Kota Tujuan</td>
+               <td><input type="radio" name="kota">Jakarta</td>
+            </tr>
+            <tr>
+               <td></td>
+               <td><input type="radio" name="kota">Semarang</td>
+            </tr>
+            <tr>
+               <td></td>
+               <td><input type="radio" name="kota">Surabaya</td>
+            </tr>
+            <tr>
+               <td>Jumlah Tiket</td>
+               <td><input type="text" name="tiket" size="2"></td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <hr>
+               </td>
+            </tr>
+            <tr>
+               <td>Harga Tiket</td>
+               <td><input type="text" name="harga" size="10" disabled></td>
+            </tr>
+            <tr>
+               <td>Total</td>
+               <td><input type="text" name="total" size="10" disabled></td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <hr>
+               </td>
+            </tr>
+         </table>
+         <hr width="350">
+         <input type="button" value="Proses" onclick="proses()">
+         <input type="reset" value="Reset">
+      </center>
+   </form>
+</body>
+
+</html>

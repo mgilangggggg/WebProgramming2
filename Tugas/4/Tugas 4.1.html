@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas4.1</title>
+</head>
+
+<body>
+    <center>
+        <script>
+            document.write("<h3>TABEL NILAI MAHASISWA</h3><hr>");
+            document.write("<table border=1>");
+            document.write("<tr bgcolor=lightskyblue>");
+            document.write("<th>NO</th>");
+            document.write("<th>NAMA SISWA</th>");
+            document.write("<th>TUGAS</th>");
+            document.write("<th>UTS</th>");
+            document.write("<th>UAS</th>");
+            document.write("<th>NA</th>");
+            document.write("</tr>");
+
+            var nama = ["Asep", "Iwan", "Cepi", "Agus", "Dadang"];
+            var tugas = [80, 75, 70, 65, 60];
+            var uts = [95, 75, 80, 40, 70];
+            var uas = [85, 90, 90, 55, 60];
+
+            for (i = 0; i < 5; i++) {
+                var na = 0.4 * tugas[i] + 0.3 * uts[i] + 0.3 * uas[i];
+
+                document.write("<tr>");
+                document.write("<td>", i + 1, "</td>");
+                document.write("<td>", nama[i], "</td>");
+                document.write("<td>", tugas[i], "</td>");
+                document.write("<td>", uts[i], "</td>");
+                document.write("<td>", uas[i], "</td>");
+                document.write("<td>", na, "</td>");
+                document.write("</tr>");
+            }
+        </script>
+    </center>
+</body>
+
+</html>

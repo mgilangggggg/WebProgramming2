@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 6.2</title>
+</head>
+
+<body bgcolor="salmon">
+    <form name="form">
+        <script>
+            function proses() {
+                var nama = document.form.nama.value;
+                var jabatan = document.form.jabatan.value;
+                var pendidikan = document.form.pendidikan.value;
+                var alamat = document.form.alamat.value;
+
+                if (jabatan == "MANAGER") {
+                    var gaji = 15000000;
+                    document.form.gaji.value = gaji;
+                } else if (jabatan == "HRD") {
+                    var gaji = 8000000;
+                    document.form.gaji.value = gaji;
+                } else if (jabatan == "MARKETING") {
+                    var gaji = 5000000;
+                    document.form.gaji.value = gaji;
+                }
+
+                if (pendidikan == "SMA") {
+                    var tunjangan = gaji * 0.1;
+                    document.form.tunjangan.value = tunjangan;
+                } else if (pendidikan == "S1") {
+                    var tunjangan = gaji * 0.15;
+                    document.form.tunjangan.value = tunjangan;
+                } else if (pendidikan == "S2") {
+                    var tunjangan = gaji * 0.2;
+                    document.form.tunjangan.value = tunjangan;
+                } else if (pendidikan == "S3") {
+                    var tunjangan = gaji * 0.3;
+                    document.form.tunjangan.value = tunjangan;
+                }
+
+                var totalgaji = gaji + tunjangan;
+
+                document.form.gaji.value = gaji;
+                document.form.tunjangan.value = tunjangan;
+                document.form.totalgaji.value = totalgaji;
+
+                alert("\nNama Pegawai : " + nama + "\nJabatan : " + jabatan + "\nPendidikan : " + pendidikan +
+                    "\nAlamat : " + alamat + "\nGaji Pokok : " + gaji + "\nTunjangan : " + tunjangan +
+                    "\nTotal Gaji : " + totalgaji + "\n\nCreated with ❤️ by 10121177_M.Gilang Abdul Gani_IF-5")
+            }
+        </script>
+        <center>
+            <h3>PROGRAM GAJI PEGAWAI</h3>
+            <hr width="350">
+            <table>
+                <tr>
+                    <td>Nama Pegawai</td>
+                    <td><input type="text" name="nama"></td>
+                </tr>
+                <tr>
+                    <td>Jabatan</td>
+                    <td>
+                        <select name="jabatan">
+                            <option value="" disabled selected>-- Pilih Jabatan --</option>
+                            <option value="MANAGER">MANAGER</option>
+                            <option value="HRD">HRD</option>
+                            <option value="MARKETING">MARKETING</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pendidikan</td>
+                    <td>
+                        <select name="pendidikan">
+                            <option value="" disabled selected>-- Pilih Pendidikan --</option>
+                            <option value="SMA">SMA</option>
+                            <option value="S1">S1</option>
+                            <option value="S2">S2</option>
+                            <option value="S3">S3</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td><textarea name="alamat"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gaji Pokok</td>
+                    <td><input type="text" name="gaji" size="10" disabled></td>
+                </tr>
+                <tr>
+                    <td>Tunjangan</td>
+                    <td><input type="text" name="tunjangan" size="10" disabled></td>
+                </tr>
+                <tr>
+                    <td>Total Gaji</td>
+                    <td><input type="text" name="totalgaji" size="10" disabled></td>
+                </tr>
+            </table>
+            <hr width="350">
+            <table>
+                <tr>
+                    <td colspan="2"></td>
+                </tr>
+            </table>
+            <input type=button value="Proses" onclick="proses()">
+            <input type=reset value="Reset">
+        </center>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2</title>
+</head>
+
+<body>
+    <script>
+        var nama = "HELGA";
+        var tinggi = "160";
+        var beratBadan = "50"; //(kilogram)
+        var tinggiBadan = "1.6"; //(meter)
+
+        bmi = beratBadan / (tinggiBadan * tinggiBadan);
+
+        if (bmi <= 18.5) {
+            keterangan = "kekurangan berat badan";
+        } else if (bmi <= 24.9) {
+            keterangan = "Normal";
+        } else if (bmi <= 29.9) {
+            keterangan = "Kelebihan berat badan";
+        } else if (bmi >= 30.0) {
+            keterangan = "Kegemukan";
+        }
+
+        document.write("Nama Anda : " + nama);
+        document.write("<br>");
+        document.write("Tinggi Badan : " + tinggi + " Cm");
+        document.write("<br>");
+        document.write("Berat Badan : " + beratBadan + " Kg");
+        document.write("<br>");
+        document.write("BMI : " + bmi);
+        document.write("<br>");
+        document.write("Keterangan : " + keterangan);
+    </script>
+</body>
+
+</html>

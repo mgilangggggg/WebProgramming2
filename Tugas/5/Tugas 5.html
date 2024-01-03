@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 5.1</title>
+</head>
+
+<body style="background-color: lightblue;">
+    <form name="form">
+        <script>
+            function proses() {
+                var jamKerja = document.form.jamKerja.value;
+                var upahPerjam = document.form.upahPerjam.value;
+                var jumlahAnak = document.form.jumlahAnak.value;
+
+                var gajiPerbulan = jamKerja * upahPerjam * 20;
+                var tunjanganAnak = jumlahAnak * 0.1 * gajiPerbulan;
+                var gajiTotalperbulan = gajiPerbulan + tunjanganAnak;
+                var PPH = 0.1 * gajiTotalperbulan;
+                var gajiBersih = gajiTotalperbulan - PPH;
+
+                document.form.gajiPerbulan.value = gajiPerbulan;
+                document.form.tunjanganAnak.value = tunjanganAnak;
+                document.form.gajiTotalperbulan.value = gajiTotalperbulan;
+                document.form.PPH.value = PPH;
+                document.form.gajiBersih.value = gajiBersih;
+                alert("Silahkan Klik 'OK' Untuk Menampilkan Hasilnya :)");
+            }
+        </script>
+        <center>
+            <font size="4">
+                <table>
+                    Program Gaji Pegawai
+                    <tr>
+                        <td colspan="2">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nama Pegawai</td>
+                        <td>:<input name="name" size="20"></td>
+                    </tr>
+                    <tr>
+                        <td>Jam Kerja Perhari</td>
+                        <td>:<input name="jamKerja" size="2"></td>
+                    </tr>
+                    <tr>
+                        <td>Upah Perjam</td>
+                        <td>:<input name="upahPerjam" size="10"></td>
+                    </tr>
+                    <tr>
+                        <td>Jumlah Anak</td>
+                        <td>:<input name="jumlahAnak" size="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gaji Per bulan</td>
+                        <td>:<input name="gajiPerbulan" size="10" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Tunjangan Anak</td>
+                        <td>:<input name="tunjanganAnak" size="10" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Gaji Total Perbulan</td>
+                        <td>:<input name="gajiTotalperbulan" size="10" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>PHH 10%</td>
+                        <td>:<input name="PPH" size="10" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Gaji Bersih Diterima</td>
+                        <td>:<input name="gajiBersih" size="10" disabled></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <hr>
+                        </td>
+                    </tr>
+                </table>
+                <input type="button" value="Proses" onclick="proses()">
+                <input type="reset" value="Reset">
+            </font>
+        </center>
+    </form>
+</body>
+
+</html>
